@@ -1,38 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 5px;
+  font-family: 'Lora', serif;
+}
+
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.progress-bar-container span {
+  font-size: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.progress-bar-content {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 5%;
+}
+
+.progress-bar {
+  height: 28px;
+  width: 97%;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 2;
+  background-color: lightgray;
+}
+
+.progress-bar-percentage {
+  height: 27px;
+  border-style: none;
+  border-radius: 20px;
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
   color: white;
+  position: relative;
+  z-index: 3;
+  right: 0;
+  padding-top: 1%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  width: 15%;
+  border-radius: 20px;
+  text-align: center;
 }
